@@ -38,7 +38,7 @@ pipeline {
 
     post {
         always {
-            junit 'results/cypress-report.xml'
+            junit 'tests/*.xml'
         }
     }
 }
