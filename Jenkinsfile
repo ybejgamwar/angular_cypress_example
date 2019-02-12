@@ -10,23 +10,23 @@ pipeline {
     stages {
         stage('Dependencies') {
             steps {
-                bat  'npm i'
+                sh  'npm i'
             }
         }
         stage('Build') {
             steps {
-                bat  'node -v'
-                bat  'npm run build'
+                sh  'node -v'
+                sh  'npm run build'
             }
         }
         stage('Unit Tests') {
             steps {
-                bat  'npm run test'
+                sh  'npm run test'
             }
         }
         stage('e2e Tests') {
             steps {
-                bat  'npm run cypress:ci'
+                sh  'npm run cypress:ci'
             }
         }
         stage('Deploy') {
